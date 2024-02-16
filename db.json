@@ -1,0 +1,54 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "title": "RGB",
+      "image": "/src/assets/gaming-pc-1.jpg",
+      "facts": [
+        "attractive RGB Light",
+        "modern design",
+        "recommended by young adults"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "RTX",
+      "image": "/src/assets/gaming-pc-2.jpg",
+      "facts": [
+        "NVIDIA GForce RTX Series",
+        "gamers choice",
+        "recommended by gamers"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Liquid Cooler",
+      "image": "/src/assets/gaming-pc-3.jpg",
+      "facts": [
+        "cooling with Liquid Cooler",
+        "incredible heat reducing",
+        "grantee 10 hours continue running"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "6473a480-e62e-4b6e-b2f0-7632e16bf8c4",
+      "email": "hpone@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "cc6bc634-df4a-416c-8fb7-b9675bcbf013",
+      "email": "test@test.com",
+      "password": "123456"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "22269600-cd91-4c95-be32-4371591f0ef7",
+      "name": "Richi",
+      "email": "richi@gmail.com",
+      "message": "Testing Message"
+    }
+  ]
+}

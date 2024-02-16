@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #fff;
+    --fill-color: #00B7C6;
+  }
+}
+
+@layer components {
+  .feature {
+    @apply relative;
+  }
+
+  /* .item-gradient {
+    @apply absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 duration-500 group-hover:from-transparent group-hover:to-transparent;
+  } */
+
+  .item-gradient {
+    @apply absolute top-0 bottom-0 right-0 left-0 bg-gray-600/30 duration-500 group-hover:bg-transparent;
+  }
+
+  .loader-wrapper {
+    width:100%;
+    background:var(--bg-color);
+  }
+
+  .hourglass{
+    display:block;
+    background:var(--bg-color);
+    margin:3em auto;
+    width:2em;
+    height:4em;
+    animation:hourglass 1s linear infinite;
+}
+
+.outer{
+    fill:var(--fill-color);
+}
+
+.middle{
+    fill:var(--bg-color);
+}
+
+@keyframes hourglass{
+    0%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset var(--fill-color) 0 -0em 0 0,
+            inset var(--bg-color) 0 -2em 0 0,
+            inset var(--fill-color) 0 -4em 0 0;
+    }
+    80%{
+        transform:rotate(0deg);
+        box-shadow:
+            inset var(--fill-color) 0 -2em 0 0,
+            inset var(--bg-color) 0 -2em 0 0,
+            inset var(--fill-color) 0 -2em 0 0;
+    }
+    100%{
+        transform:rotate(180deg);
+        box-shadow:
+            inset var(--fill-color) 0 -2em 0 0,
+            inset var(--bg-color) 0 -2em 0 0,
+            inset var(--fill-color) 0 -2em 0 0;
+    }
+}.hourglass{
+  display:block;
+  background:var(--bg-color);
+  margin:3em auto;
+  width:2em;
+  height:4em;
+  animation:hourglass 1s linear infinite;
+}
+
+.outer{
+  fill:var(--fill-color);
+}
+
+.middle{
+  fill:var(--bg-color);
+}
+
+@keyframes hourglass{
+  0%{
+      transform:rotate(0deg);
+      box-shadow:
+          inset var(--fill-color) 0 -0em 0 0,
+          inset var(--bg-color) 0 -2em 0 0,
+          inset var(--fill-color) 0 -4em 0 0;
+  }
+  80%{
+      transform:rotate(0deg);
+      box-shadow:
+          inset var(--fill-color) 0 -2em 0 0,
+          inset var(--bg-color) 0 -2em 0 0,
+          inset var(--fill-color) 0 -2em 0 0;
+  }
+  100%{
+      transform:rotate(180deg);
+      box-shadow:
+          inset var(--fill-color) 0 -2em 0 0,
+          inset var(--bg-color) 0 -2em 0 0,
+          inset var(--fill-color) 0 -2em 0 0;
+  }
+}
+}
+
+/* HAMBURGER MENU */
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+  background: #000;
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  /* position: fixed;
+  top: 50px;
+  right: 25px; */
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background-color: #000;
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background-color: #000;
+}
+
